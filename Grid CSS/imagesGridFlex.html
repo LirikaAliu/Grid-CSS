@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Images Grid and Flexbox</title>
+    <style>
+        body{
+            font-family: sans-serif;
+        }
+
+        .card {
+            display: grid;
+            grid-template-rows: 200px min-content;
+        }
+
+        .card > img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .tags {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+
+        .tags > * {
+            background-color: #999;
+            color: #fff;
+            font-size: 80%;
+            margin: 5px;
+            padding: 0.2em 0.8em;
+            border-radius: 0.2em;
+        }
+
+        .container{
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 10px;
+        }
+
+        .tags{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="card">
+            <img src="images/ballon.png" alt="a single red ballon">
+            <ul class="tags">
+                <li>balloon</li>
+                <li>red</li>
+                <li>sky</li>
+                <li>blue</li>
+                <li>hot air ballon</li>
+            </ul>
+        </div>
+        <div class="card">
+            <img src="images/balloons-houses.jpg" alt="balloons over some houses">
+            <ul class="tags">
+                <li>balloon</li>
+                <li>houses</li>
+                <li>train</li>
+                <li>harborside</li>
+            </ul>
+        </div>
+        <div class="card">
+            <img src="images/ballons-inflating.jpg" alt="close-up of balloons inflating">
+            <ul class="tags">
+                <li>balloons</li>
+                <li>inflating</li>
+                <li>green</li>
+                <li>blue</li>
+            </ul>
+        </div>
+        <div class="card">
+            <img src="images/balloon-sun.jpg" alt="a ballon in sun">
+            <ul class="tags">
+                <li>balloon</li>
+                <li>sun</li>
+                <li>sky</li>
+                <li>summer</li>
+                <li>bright</li>
+            </ul>
+        </div>
+        
+
+    </div>
+</body>
+</html>
